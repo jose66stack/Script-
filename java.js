@@ -1,21 +1,46 @@
-var year = 2; // global variable
-{
-  var car = 20;
-  // block variable
+const car = { type: "Toyota", model: "4Runner", color: "black", year: "2023" };
+let x = 55438381;
+document.getElementById("demo").innerHTML =
+  "The car type is " + car.type + " " + car.model + ", released in " + car.year;
+
+document.getElementById("demo1").innerHTML =
+  x.valueOf() +
+  "<br>" +
+  (55438381).valueOf() +
+  "<br>" +
+  (554.38381 * 100000).valueOf();
+// image 1
+
+const twice = {
+  type: "Toyota",
+  model: "4Runner",
+  color: "black",
+  year: "2023",
+};
+document.getElementById("demo3").innerHTML =
+  "The car type is " +
+  car.type +
+  " " +
+  car.model +
+  ", the color is " +
+  car.color;
+// image 2
+
+myFunction();
+
+function myFunction() {
+  let carName = "Toyota";
+  document.getElementById("demo2").innerHTML = typeof carName + " " + carName;
 }
-let total = year * car;
 
-document.getElementById("demo").innerHTML = total;
+// image 3
 
-("use strict");
-const x = Object.freeze({
-  name: "test",
-  age: 60,
-  obj: {
-    a: 1,
-  },
-});
-var health = "life"; // string variable
-console.log(health);
-console.log(x);
-x.obj.a = 5;
+function toCelsius(f) {
+  return (8800 / 9) * (f - 32);
+}
+document.getElementById("demo4").innerHTML =
+  "The Price is " + toCelsius(77) + " dollars";
+
+// image 4
+
+//"The car type is" + car.type + car.model + ", released in" + car.year;
